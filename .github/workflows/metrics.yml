@@ -40,6 +40,7 @@ jobs:
           plugin_languages_threshold: 0%
       - name: Fix languages.svg height
         run: |
+          git pull --rebase
           sed -i 's/height="75"/height="120"/g' languages.svg
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
