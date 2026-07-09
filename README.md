@@ -1,3 +1,3 @@
-<img src="profile.svg" alt="Metrics" width="100%">
+<img src="profile.svg" alt="Metrics">
 
-<img src="languages.svg" alt="Languages" width="100%">
+<img src="languages.svg" alt="Languages">
