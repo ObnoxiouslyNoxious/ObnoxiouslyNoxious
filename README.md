@@ -1,5 +1,3 @@
-[![Metrics](https://github.com/ObnoxiouslyNoxious/ObnoxiouslyNoxious/raw/main/profile.svg)](https://github.com/ObnoxiouslyNoxious/ObnoxiouslyNoxious/blob/main/profile.svg)
+<img src="profile.svg" alt="Metrics" width="100%">
 
-[![Metrics](https://github.com/ObnoxiouslyNoxious/ObnoxiouslyNoxious/raw/main/languages.svg)](https://github.com/ObnoxiouslyNoxious/ObnoxiouslyNoxious/blob/main/languages.svg)
-
-[![Streak](https://streak-stats.demolab.com?user=ObnoxiouslyNoxious&theme=dark)](https://streak-stats.demolab.com/?user=ObnoxiouslyNoxious)
+<img src="languages.svg" alt="Languages" width="100%">
