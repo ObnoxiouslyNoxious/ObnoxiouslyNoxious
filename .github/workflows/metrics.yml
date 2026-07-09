@@ -40,10 +40,10 @@ jobs:
           plugin_languages_threshold: 0%
       - name: Fix languages.svg height
         run: |
-          git pull --rebase
+          git pull --rebase origin main
           sed -i 's/height="75"/height="120"/g' languages.svg
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add languages.svg
           git diff --cached --quiet || git commit -m "Fix languages.svg height [Skip GitHub Action]"
-          git push
+          git push --force-with-lease origin main
