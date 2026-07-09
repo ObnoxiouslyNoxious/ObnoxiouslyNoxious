@@ -18,7 +18,7 @@ jobs:
           user: ObnoxiouslyNoxious
           template: classic
           base: header, activity, community, repositories, metadata
-          config_display: columns
+          config_display: regular
           config_octicon: yes
           config_timezone: Australia/Sydney
       - uses: lowlighter/metrics@latest
@@ -28,7 +28,7 @@ jobs:
           user: ObnoxiouslyNoxious
           template: classic
           base: ""
-          config_display: columns
+          config_display: regular
           config_octicon: yes
           config_timezone: Australia/Sydney
           plugin_languages: yes
@@ -38,14 +38,3 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-      - name: Fix languages.svg height
-        run: |
-          git pull --rebase origin main
-          sed -i 's/height="75"/height="120"/g' languages.svg
-          cp profile.svg img/profile.svg
-          cp languages.svg img/languages.svg
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add profile.svg languages.svg img/profile.svg img/languages.svg
-          git diff --cached --quiet || git commit -m "Update metrics + sync to img [Skip GitHub Action]"
-          git push --force-with-lease origin main
