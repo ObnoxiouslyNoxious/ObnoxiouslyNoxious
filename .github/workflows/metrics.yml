@@ -42,8 +42,10 @@ jobs:
         run: |
           git pull --rebase origin main
           sed -i 's/height="75"/height="120"/g' languages.svg
+          cp profile.svg img/profile.svg
+          cp languages.svg img/languages.svg
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add languages.svg
-          git diff --cached --quiet || git commit -m "Fix languages.svg height [Skip GitHub Action]"
+          git add profile.svg languages.svg img/profile.svg img/languages.svg
+          git diff --cached --quiet || git commit -m "Update metrics + sync to img [Skip GitHub Action]"
           git push --force-with-lease origin main
